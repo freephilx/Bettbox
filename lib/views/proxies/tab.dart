@@ -7,7 +7,6 @@ import 'package:bett_box/providers/providers.dart';
 import 'package:bett_box/state.dart';
 import 'package:bett_box/widgets/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -472,7 +471,7 @@ class _ProxyGroupViewState extends ConsumerState<ProxyGroupView> {
         child: GridView.builder(
           key: _getPageStorageKey(),
           controller: _controller,
-          scrollCacheExtent: const ScrollCacheExtent.viewport(1.0),
+          cacheExtent: MediaQuery.sizeOf(context).height,
           padding: EdgeInsets.only(
             top: 16,
             left: 16,
