@@ -6,6 +6,7 @@
   "main": "",
   "author": "",
   "license": "",
-  "dependencies": {},
+  "dependencies": {
+    "libvpnfd.so": "file:./src/main/cpp/types/libvpnfd"
+  },
 }
-

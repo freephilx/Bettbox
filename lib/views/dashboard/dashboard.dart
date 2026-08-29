@@ -187,7 +187,7 @@ class _DashboardViewState extends ConsumerState<DashboardView> {
       ref
           .read(appSettingProvider.notifier)
           .updateState(
-            (state) => system.isAndroid
+            (state) => system.isMobile
                 ? state.copyWith(
                     mobileDashboardWidgets: dashboardWidgets,
                     dashboardWidgets: dashboardWidgets,

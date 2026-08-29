@@ -456,3 +456,33 @@ abstract class ClashHandlerInterface with ClashInterface {
     );
   }
 }
+
+/// Keeps the UI usable on platforms without a native Clash backend.
+class UnavailableClashHandler extends ClashHandlerInterface {
+  @override
+  Future<T> invoke<T>({
+    required ActionMethod method,
+    dynamic data,
+    Duration? timeout,
+    FutureOr<T> Function()? onTimeout,
+    T? defaultValue,
+  }) async {
+    if (defaultValue != null) return defaultValue;
+    if (T == bool) return false as T;
+    if (T == String) return '' as T;
+    if (T == Map) return <dynamic, dynamic>{} as T;
+    return null as T;
+  }
+
+  @override
+  Future<bool> preload() async => true;
+
+  @override
+  void sendMessage(String message) {}
+
+  @override
+  Future<void> reStart() async {}
+
+  @override
+  Future<bool> destroy() async => true;
+}

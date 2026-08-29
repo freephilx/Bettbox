@@ -31,7 +31,7 @@ class Tray {
   }
 
   void _handleDelayTestStateChanged() {
-    if (system.isAndroid) return;
+    if (!system.isDesktop) return;
     unawaited(globalState.appController.updateTray(false, true));
   }
 
@@ -53,7 +53,7 @@ class Tray {
     required bool isStart,
     bool force = false,
   }) async {
-    if (system.isAndroid) {
+    if (!system.isDesktop) {
       return;
     }
     if (force) {
@@ -89,7 +89,7 @@ class Tray {
     bool silent = false,
     bool force = false,
   }) async {
-    if (system.isAndroid) {
+    if (!system.isDesktop) {
       return;
     }
 

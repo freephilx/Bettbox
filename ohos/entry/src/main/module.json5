@@ -21,6 +21,9 @@
         "startWindowIcon": "$media:icon",
         "startWindowBackground": "$color:start_window_background",
         "exported": true,
+        "backgroundModes": [
+          "dataTransfer"
+        ],
         "skills": [
           {
             "entities": [
@@ -33,8 +36,18 @@
         ]
       }
     ],
+    "extensionAbilities": [
+      {
+        "name": "BettboxVpnExtensionAbility",
+        "srcEntry": "./ets/vpnextensionability/BettboxVpnExtensionAbility.ets",
+        "type": "vpn",
+        "extensionProcessMode": "bundle",
+        "exported": false
+      }
+    ],
     "requestPermissions": [
       {"name" :  "ohos.permission.INTERNET"},
+      {"name" :  "ohos.permission.KEEP_BACKGROUND_RUNNING"},
     ]
   }
 }

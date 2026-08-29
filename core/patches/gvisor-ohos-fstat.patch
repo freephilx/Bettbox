@@ -1,0 +1,15 @@
+diff --git a/pkg/tcpip/link/fdbased/endpoint.go b/pkg/tcpip/link/fdbased/endpoint.go
+--- a/pkg/tcpip/link/fdbased/endpoint.go
++++ b/pkg/tcpip/link/fdbased/endpoint.go
+@@ -474,6 +474,11 @@ func JoinPacketFanoutGroup(fd int, fID int32) error {
+ func IsSocketFD(fd int) (bool, error) {
+ 	var stat unix.Stat_t
+ 	if err := unix.Fstat(fd, &stat); err != nil {
++		// HarmonyOS VPN descriptors deny fstat even though readv/writev and
++		// non-blocking mode are supported. They are TUN devices, not sockets.
++		if err == unix.EPERM || err == unix.EACCES {
++			return false, nil
++		}
+ 		return false, fmt.Errorf("unix.Fstat(%v,...) failed: %v", fd, err)
+ 	}
+ 	return (stat.Mode & unix.S_IFSOCK) == unix.S_IFSOCK, nil

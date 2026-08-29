@@ -1,7 +1,20 @@
-
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/zhifeiqiu/.ohos/config/default_ohos_PyBuyzVBJI-QBb3CbdzecbUzt9_5uSBrWcWQdGse5lU=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B63CF3BF942A971FDB112DCE6FC1010CF4D00282C0E27F35E6B4A148AF11CEAECD814C02638D90D",
+          "profile": "/Users/zhifeiqiu/.ohos/config/default_ohos_PyBuyzVBJI-QBb3CbdzecbUzt9_5uSBrWcWQdGse5lU=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/zhifeiqiu/.ohos/config/default_ohos_PyBuyzVBJI-QBb3CbdzecbUzt9_5uSBrWcWQdGse5lU=.p12",
+          "storePassword": "0000001BE77C028A0AA7AAD5A55B85BF9866157AF66F861B2E2606B321750936A768CF8F89A2516D2A74A9"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",

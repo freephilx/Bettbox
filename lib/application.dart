@@ -147,12 +147,18 @@ class ApplicationState extends ConsumerState<Application>
         ),
       );
     }
-    return AndroidManager(
-      child: TileManager(child: SmartAutoStopManager(child: child)),
-    );
+    if (system.isAndroid) {
+      return AndroidManager(
+        child: TileManager(child: SmartAutoStopManager(child: child)),
+      );
+    }
+    return child;
   }
 
   Widget _buildState(Widget child) {
+    if (system.isOhos) {
+      return AppStateManager(child: ClashManager(child: child));
+    }
     return AppStateManager(
       child: ClashManager(
         child: ConnectivityManager(

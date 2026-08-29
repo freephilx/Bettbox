@@ -323,11 +323,10 @@ packages:
   device_info_plus:
     dependency: "direct main"
     description:
-      name: device_info_plus
-      sha256: b4fed1b2835da9d670d7bed7db79ae2a94b0f5ad6312268158a9b5479abbacdd
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "12.4.0"
+      path: "plugins/ohos/device_info_plus"
+      relative: true
+    source: path
+    version: "9.1.0"
   device_info_plus_platform_interface:
     dependency: transitive
     description:
@@ -975,19 +974,18 @@ packages:
   package_info_plus:
     dependency: "direct main"
     description:
-      name: package_info_plus
-      sha256: "468c26b4254ab01979fa5e4a98cb343ea3631b9acee6f21028997419a80e1a20"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "9.0.1"
+      path: "plugins/ohos/package_info_plus"
+      relative: true
+    source: path
+    version: "4.2.0"
   package_info_plus_platform_interface:
     dependency: transitive
     description:
       name: package_info_plus_platform_interface
-      sha256: "202a487f08836a592a6bd4f901ac69b3a8f146af552bbd14407b6b41e1c3f086"
+      sha256: "9bc8ba46813a4cc42c66ab781470711781940780fd8beddd0c3da62506d3a6c6"
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.2.1"
+    version: "2.0.1"
   path:
     dependency: "direct main"
     description:
@@ -1035,6 +1033,13 @@ packages:
       sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
       url: "https://pub.flutter-io.cn"
     source: hosted
+    version: "2.2.1"
+  path_provider_ohos:
+    dependency: "direct main"
+    description:
+      path: "plugins/ohos/path_provider_ohos"
+      relative: true
+    source: path
     version: "2.2.1"
   path_provider_platform_interface:
     dependency: transitive
@@ -1259,6 +1264,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.4.1"
+  shared_preferences_ohos:
+    dependency: "direct main"
+    description:
+      path: "plugins/ohos/shared_preferences_ohos"
+      relative: true
+    source: path
+    version: "2.2.0"
   shared_preferences_platform_interface:
     dependency: transitive
     description:
@@ -1527,6 +1539,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.2.5"
+  url_launcher_ohos:
+    dependency: "direct main"
+    description:
+      path: "plugins/ohos/url_launcher_ohos"
+      relative: true
+    source: path
+    version: "6.0.38"
   url_launcher_platform_interface:
     dependency: transitive
     description:

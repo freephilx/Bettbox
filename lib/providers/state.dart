@@ -270,7 +270,7 @@ NavigationState navigationState(Ref ref) {
 DashboardState dashboardState(Ref ref) {
   final dashboardWidgets = ref.watch(
     appSettingProvider.select(
-      (state) => system.isAndroid
+      (state) => system.isMobile
           ? state.mobileDashboardWidgets
           : state.desktopDashboardWidgets,
     ),
